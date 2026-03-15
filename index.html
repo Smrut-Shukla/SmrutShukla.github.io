@@ -1,27 +1,216 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Smrut Shukla | Java Developer</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-size:18px;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:22px;
+color:#ddd;
+}
+
+.btn{
+margin-top:20px;
+padding:15px 30px;
+border:none;
+background:#00d4ff;
+color:black;
+font-weight:bold;
+border-radius:30px;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+/* SKILLS */
+
+.section{
+padding:80px 100px;
+}
+
+.skills{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.skill-card{
+background:rgba(255,255,255,0.05);
+padding:20px 40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.skill-card:hover{
+transform:translateY(-10px) scale(1.1);
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+transition:0.4s;
+}
+
+.project-card:hover{
+transform:rotateY(10deg) scale(1.05);
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#aaa;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>Smrut Shukla</h1>
-<p>Java Backend Developer</p>
+<nav>
+<div><b>Smrut Shukla</b></div>
+
+<div>
+<a href="#">Home</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+
+<section class="hero">
+
+<h1>Java Backend Developer</h1>
+<p>Spring Boot • AWS • REST APIs • Microservices</p>
+
+<button class="btn">View My Projects</button>
+
+</section>
+
+
+<section class="section" id="skills">
 
 <h2>Skills</h2>
-<ul>
-<li>Java</li>
-<li>Spring Boot</li>
-<li>AWS S3</li>
-<li>Docker</li>
-</ul>
+
+<div class="skills">
+
+<div class="skill-card">Java</div>
+<div class="skill-card">Spring Boot</div>
+<div class="skill-card">AWS S3</div>
+<div class="skill-card">Docker</div>
+<div class="skill-card">MySQL</div>
+<div class="skill-card">JWT Security</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section" id="projects">
 
 <h2>Projects</h2>
-<p>Document Management System</p>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>Document Management System</h3>
+<p>File upload, history tracking and AWS S3 integration.</p>
+</div>
+
+<div class="project-card">
+<h3>OCR Image to Text API</h3>
+<p>Extract text from images using Tesseract OCR.</p>
+</div>
+
+<div class="project-card">
+<h3>JWT Authentication System</h3>
+<p>Secure login and token-based authentication.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section contact" id="contact">
 
 <h2>Contact</h2>
+
 <p>Email: shrutishukla9696@gmail.com</p>
+<p>GitHub: github.com/Smrut-Shukla</p>
+
+</section>
+
+<footer>
+
+© 2026 Smrut Shukla
+
+</footer>
 
 </body>
 </html>
