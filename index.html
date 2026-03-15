@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,205 +10,147 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
 body{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+margin:0;
+font-family:Arial;
+background:#0f172a;
 color:white;
-line-height:1.6;
 }
 
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-flex-wrap:wrap;
-}
-
-nav h2{
-font-weight:600;
-}
-
-nav div{
-display:flex;
-gap:20px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-size:16px;
-}
-
-/* HERO */
-
-.hero{
-min-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
+.container{
+max-width:1100px;
+margin:auto;
 padding:40px 20px;
 }
 
-.hero h1{
-font-size:60px;
+/* PROFILE CARD */
+
+.card{
+background:#0f2f2a;
+border-radius:15px;
+padding:40px;
+display:grid;
+grid-template-columns:280px 1fr;
+gap:40px;
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.profile{
+text-align:center;
+}
+
+.profile img{
+width:170px;
+height:170px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.profile h2{
+margin-top:15px;
+}
+
+.profile p{
+opacity:0.8;
+}
+
+/* SOCIAL */
+
+.social{
+margin-top:20px;
+}
+
+.social a{
+margin:0 10px;
+color:white;
+text-decoration:none;
+font-size:20px;
+}
+
+/* ABOUT */
+
+.about h1{
 margin-bottom:10px;
 }
 
-.hero p{
-font-size:22px;
-color:#ddd;
+.about p{
+opacity:0.9;
+line-height:1.7;
 }
 
+/* BUTTON */
+
 .btn{
-margin-top:25px;
-padding:14px 30px;
-background:#00d4ff;
-color:black;
-border:none;
-border-radius:25px;
-font-weight:bold;
-cursor:pointer;
-transition:0.3s;
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
+background:#2563eb;
+color:white;
+border-radius:6px;
 text-decoration:none;
 }
 
-.btn:hover{
-transform:scale(1.1);
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:30px;
 }
 
 /* SECTION */
 
-.section{
-padding:80px 120px;
+.section h3{
+margin-bottom:10px;
 }
 
-.section h2{
-margin-bottom:30px;
-font-size:32px;
-text-align:center;
+.section ul{
+padding-left:20px;
+line-height:1.8;
 }
 
-/* SKILLS */
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
-}
-
-.skill-card{
-background:rgba(255,255,255,0.08);
-padding:18px 30px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-transition:0.3s;
-}
-
-.skill-card:hover{
-transform:translateY(-8px) scale(1.05);
-}
-
-/* EXPERIENCE */
-
-.exp-box{
-background:rgba(255,255,255,0.08);
-padding:25px;
-border-radius:12px;
-}
-
-/* PROJECTS */
+/* PROJECT CARDS */
 
 .projects{
+margin-top:50px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+grid-template-columns:1fr 1fr;
+gap:30px;
 }
 
-.project-card{
-background:rgba(255,255,255,0.08);
-padding:30px;
-border-radius:15px;
-box-shadow:0 15px 35px rgba(0,0,0,0.4);
-transition:0.3s;
+.project{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
 }
 
-.project-card:hover{
-transform:scale(1.05);
-}
-
-.project-card ul{
-margin-top:10px;
-padding-left:20px;
+.project h3{
+margin-bottom:10px;
 }
 
 /* CONTACT */
 
 .contact{
+margin-top:50px;
 text-align:center;
 }
 
-footer{
+/* MOBILE */
+
+@media(max-width:768px){
+
+.card{
+grid-template-columns:1fr;
 text-align:center;
-padding:30px;
-color:#aaa;
 }
 
-/* MOBILE RESPONSIVE */
-
-@media (max-width:768px){
-
-nav{
-flex-direction:column;
-text-align:center;
-gap:10px;
-padding:20px;
-}
-
-nav div{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.hero h1{
-font-size:36px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.section{
-padding:50px 20px;
+.grid{
+grid-template-columns:1fr;
 }
 
 .projects{
 grid-template-columns:1fr;
-}
-
-.skill-card{
-padding:15px 20px;
-}
-
-.project-card{
-padding:20px;
 }
 
 }
@@ -218,198 +161,198 @@ padding:20px;
 
 <body>
 
-<!-- NAVBAR -->
+<div class="container">
 
-<nav>
+<!-- PROFILE + ABOUT -->
+
+<div class="card">
+
+<div class="profile">
+
+<img src="https://via.placeholder.com/170">
 
 <h2>Smrut Shukla</h2>
 
-<div>
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<p>Java Backend Developer</p>
+
+<p>MapleCloud Technologies</p>
+
+<div class="social">
+
+<a href="mailto:shrutishukla9696@gmail.com">📧</a>
+
+<a href="https://github.com">🐙</a>
+
+<a href="https://www.linkedin.com/in/smrut-shukla-07a2b5233">💼</a>
+
 </div>
 
-</nav>
+</div>
 
+<div class="about">
 
-<!-- HERO -->
-
-<section class="hero">
-
-<h1>Java Backend Developer</h1>
-
-<p>Spring Boot • Microservices • REST APIs</p>
-
-<a href="#projects" class="btn">View My Work</a>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="section" id="about">
-
-<h2>About Me</h2>
+<h1>About Me</h1>
 
 <p>
 
-Java Backend Developer with 1.5 years of experience building scalable web
-applications using Java, Spring Boot and Microservices architecture.
+Java Backend Developer with 1.5+ years of experience building scalable
+backend systems using Java and Spring Boot.
 
-Experienced in developing REST APIs, implementing secure authentication
-using JWT, and working with Docker, Kafka and WebSocket technologies.
+I focus on developing REST APIs, microservices architectures and secure
+authentication systems using JWT and Spring Security.
 
-Contributed to enterprise systems such as Learning Management Systems
-and Document Management Systems focusing on performance,
-maintainability and scalability.
+I have contributed to enterprise applications including a Document
+Management System, Learning Management System and network monitoring
+platforms using OpenNMS.
 
 </p>
 
-</section>
+<div class="grid">
 
+<div class="section">
 
-<!-- SKILLS -->
+<h3>Technical Skills</h3>
 
-<section class="section" id="skills">
+<ul>
 
-<h2>Technical Skills</h2>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>Spring Security</li>
+<li>Microservices</li>
+<li>Hibernate / JPA</li>
+<li>Docker</li>
+<li>Kafka</li>
+<li>WebSocket</li>
+<li>SQL</li>
+<li>OpenNMS</li>
 
-<div class="skills">
-
-<div class="skill-card">Java</div>
-<div class="skill-card">Spring Boot</div>
-<div class="skill-card">Spring Security</div>
-<div class="skill-card">JWT</div>
-<div class="skill-card">Microservices</div>
-<div class="skill-card">Hibernate</div>
-<div class="skill-card">REST APIs</div>
-<div class="skill-card">Docker</div>
-<div class="skill-card">Kafka</div>
-<div class="skill-card">SQL</div>
-<div class="skill-card">WebSocket</div>
+</ul>
 
 </div>
 
-</section>
+<div class="section">
 
+<h3>Education</h3>
+
+<ul>
+
+<li>B.Tech Computer Science</li>
+<li>Dr. A.P.J Abdul Kalam Technical University</li>
+<li>2018 – 2022</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 <!-- EXPERIENCE -->
 
-<section class="section">
+<div class="projects">
 
-<h2>Experience</h2>
+<div class="project">
 
-<div class="exp-box">
-
-<h3>Software Developer</h3>
-
-<p><b>MapleCloud Technologies — Noida</b></p>
-
-<p>Aug 2024 – Present</p>
+<h3>Professional Experience</h3>
 
 <ul>
 
 <li>Develop backend services using Java and Spring Boot</li>
-<li>Build scalable REST APIs and Microservices</li>
-<li>Implemented JWT-based authentication</li>
-<li>Worked with Docker, Kafka and WebSocket integrations</li>
-<li>Contributed to LMS and Document Management Systems</li>
+
+<li>Build scalable REST APIs and microservices</li>
+
+<li>Implemented JWT-based authentication using Spring Security</li>
+
+<li>Worked with Docker and Kafka for scalable backend systems</li>
+
+<li>Developed APIs in OpenNMS modules including Category and Community String management</li>
+
+<li>Implemented backend APIs for bulk node onboarding in OpenNMS</li>
+
+<li>Configured monitoring and worked with both OpenNMS GUI and backend modules</li>
+
+<li>Currently contributing to development in the NMS module</li>
 
 </ul>
 
 </div>
 
-</section>
+<div class="project">
 
-
-<!-- PROJECTS -->
-
-<section class="section" id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="project-card">
-
-<h3>Document Management System (DMS)</h3>
+<h3>Document Management System (Team Project)</h3>
 
 <ul>
 
-<li>Secure document upload and storage using AWS S3</li>
-<li>Workflow-based document approval system</li>
-<li>Team collaboration and document sharing</li>
-<li>Version history tracking for document updates</li>
-<li>OCR-based text extraction using Tesseract</li>
-<li>REST APIs with JWT-based authentication</li>
+<li>Contributed to backend development using Java and Spring Boot</li>
+
+<li>Implemented APIs for document upload and secure access</li>
+
+<li>Worked on workflow-based document approval system</li>
+
+<li>Participated in collaboration and document sharing features</li>
+
+<li>Worked with OCR functionality for text extraction from documents</li>
+
+<li>Supported document version tracking and activity history</li>
 
 </ul>
 
-<p><b>Tech Stack:</b> Java, Spring Boot, JWT, AWS S3, Hibernate, MySQL</p>
+<p><b>Tech:</b> Java, Spring Boot, AWS S3, Hibernate, JWT</p>
 
 </div>
 
+<div class="project">
 
-<div class="project-card">
-
-<h3>Learning Management System (LMS)</h3>
+<h3>Learning Management System (Team Project)</h3>
 
 <ul>
 
-<li>Developed REST APIs for course and user management</li>
-<li>Integrated AI chatbot for student support</li>
-<li>Implemented real-time messaging using WebSocket</li>
-<li>Integrated Google Meet for live classes</li>
-<li>Enabled file upload for course materials</li>
+<li>Contributed to backend services for course and user management</li>
+
+<li>Developed REST APIs using Spring Boot</li>
+
+<li>Participated in AI chatbot integration for student assistance</li>
+
+<li>Worked on real-time messaging using WebSocket</li>
+
+<li>Integrated Google Meet for live online classes</li>
+
 <li>Implemented secure authentication using JWT</li>
 
 </ul>
 
-<p><b>Tech Stack:</b> Java, Spring Boot, WebSocket, JWT, MySQL</p>
+<p><b>Tech:</b> Java, Spring Boot, WebSocket, JWT, MySQL</p>
 
 </div>
 
 </div>
-
-</section>
-
 
 <!-- CONTACT -->
 
-<section class="section contact" id="contact">
+<div class="contact">
 
 <h2>Contact</h2>
 
 <p>Email:
-<a href="mailto:shrutishukla9696@gmail.com"
-style="color:#00d4ff;text-decoration:none;font-weight:bold;">
+<a href="mailto:shrutishukla9696@gmail.com">
 shrutishukla9696@gmail.com
 </a>
 </p>
 
-<p>Phone: 9696309176</p>
-
-<p>Location: Noida, Uttar Pradesh</p>
-
 <p>LinkedIn:
-<a href="https://www.linkedin.com/in/smrut-shukla-07a2b5233"
-target="_blank"
-style="color:#00d4ff;text-decoration:none;font-weight:bold;">
-View LinkedIn Profile
+<a href="https://www.linkedin.com/in/smrut-shukla-07a2b5233">
+linkedin.com/in/smrut-shukla
 </a>
 </p>
 
-</section>
+<p>Location: Noida, Uttar Pradesh</p>
 
+</div>
 
-<footer>
-
-© 2026 Smrut Shukla | Java Backend Developer
-
-</footer>
+</div>
 
 </body>
 
