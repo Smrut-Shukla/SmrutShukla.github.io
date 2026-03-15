@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,10 @@ box-sizing:border-box;
 font-family:Arial;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
@@ -27,31 +32,37 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 80px;
+padding:20px 60px;
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(10px);
+flex-wrap:wrap;
 }
 
 nav h2{
 font-weight:600;
 }
 
+nav div{
+display:flex;
+gap:20px;
+}
+
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
 font-size:16px;
 }
 
 /* HERO */
 
 .hero{
-height:90vh;
+min-height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding:40px 20px;
 }
 
 .hero h1{
@@ -74,6 +85,7 @@ border-radius:25px;
 font-weight:bold;
 cursor:pointer;
 transition:0.3s;
+text-decoration:none;
 }
 
 .btn:hover{
@@ -89,6 +101,7 @@ padding:80px 120px;
 .section h2{
 margin-bottom:30px;
 font-size:32px;
+text-align:center;
 }
 
 /* SKILLS */
@@ -97,6 +110,7 @@ font-size:32px;
 display:flex;
 flex-wrap:wrap;
 gap:20px;
+justify-content:center;
 }
 
 .skill-card{
@@ -111,11 +125,19 @@ transition:0.3s;
 transform:translateY(-8px) scale(1.05);
 }
 
+/* EXPERIENCE */
+
+.exp-box{
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:12px;
+}
+
 /* PROJECTS */
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
@@ -131,12 +153,9 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* EXPERIENCE */
-
-.exp-box{
-background:rgba(255,255,255,0.08);
-padding:25px;
-border-radius:12px;
+.project-card ul{
+margin-top:10px;
+padding-left:20px;
 }
 
 /* CONTACT */
@@ -149,6 +168,48 @@ footer{
 text-align:center;
 padding:30px;
 color:#aaa;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+nav{
+flex-direction:column;
+text-align:center;
+gap:10px;
+padding:20px;
+}
+
+nav div{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section{
+padding:50px 20px;
+}
+
+.projects{
+grid-template-columns:1fr;
+}
+
+.skill-card{
+padding:15px 20px;
+}
+
+.project-card{
+padding:20px;
+}
+
 }
 
 </style>
@@ -276,7 +337,8 @@ maintainability and scalability.
 
 <h3>Document Management System (DMS)</h3>
 
-<p>
+<ul>
+
 <li>Secure document upload and storage using AWS S3</li>
 <li>Workflow-based document approval system</li>
 <li>Team collaboration and document sharing</li>
@@ -284,7 +346,7 @@ maintainability and scalability.
 <li>OCR-based text extraction using Tesseract</li>
 <li>REST APIs with JWT-based authentication</li>
 
-</p>
+</ul>
 
 <p><b>Tech Stack:</b> Java, Spring Boot, JWT, AWS S3, Hibernate, MySQL</p>
 
@@ -295,21 +357,13 @@ maintainability and scalability.
 
 <h3>Learning Management System (LMS)</h3>
 
-<p>
-
-A scalable backend platform for managing online courses,
-student learning and real-time communication built using
-Java and Spring Boot.
-
-</p>
-
 <ul>
 
 <li>Developed REST APIs for course and user management</li>
-<li>Integrated AI chatbot for student support and query resolution</li>
+<li>Integrated AI chatbot for student support</li>
 <li>Implemented real-time messaging using WebSocket</li>
-<li>Integrated Google Meet for conducting live online classes</li>
-<li>Enabled file upload and course material sharing</li>
+<li>Integrated Google Meet for live classes</li>
+<li>Enabled file upload for course materials</li>
 <li>Implemented secure authentication using JWT</li>
 
 </ul>
@@ -338,11 +392,13 @@ shrutishukla9696@gmail.com
 
 <p>Phone: 9696309176</p>
 
-<p>Location: Noida Uttar Pradesh</p>
+<p>Location: Noida, Uttar Pradesh</p>
 
-<p>LinkedIn: 
-<a href="https://www.linkedin.com/in/smrut-shukla-07a2b5233" target="_blank">
-linkedin.com/in/smrut-shukla
+<p>LinkedIn:
+<a href="https://www.linkedin.com/in/smrut-shukla-07a2b5233"
+target="_blank"
+style="color:#00d4ff;text-decoration:none;font-weight:bold;">
+View LinkedIn Profile
 </a>
 </p>
 
