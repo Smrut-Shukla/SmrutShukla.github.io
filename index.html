@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -22,63 +23,31 @@ margin:auto;
 padding:40px 20px;
 }
 
-/* PROFILE CARD */
+/* MAIN CARD */
 
 .card{
 background:#0f2f2a;
 border-radius:15px;
 padding:40px;
-display:grid;
-grid-template-columns:280px 1fr;
-gap:40px;
 box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-.profile{
+/* HEADER */
+
+.header{
 text-align:center;
+margin-bottom:30px;
 }
 
-.profile img{
-width:170px;
-height:170px;
-border-radius:50%;
-object-fit:cover;
-border:3px solid #06b6d4;
-box-shadow:0 10px 25px rgba(6,182,212,0.6);
-transition:0.3s;
+.header h1{
+margin-bottom:10px;
 }
 
-.profile img:hover{
-transform:scale(1.05);
-box-shadow:0 15px 40px rgba(6,182,212,0.9);
-}
-
-.profile h2{
-margin-top:15px;
-}
-
-.profile p{
+.header p{
 opacity:0.8;
 }
 
-/* SOCIAL */
-
-.social{
-margin-top:20px;
-}
-
-.social a{
-margin:0 10px;
-color:white;
-text-decoration:none;
-font-size:20px;
-}
-
 /* ABOUT */
-
-.about h1{
-margin-bottom:10px;
-}
 
 .about p{
 opacity:0.9;
@@ -147,14 +116,14 @@ margin-top:50px;
 text-align:center;
 }
 
+.contact a{
+color:#06b6d4;
+text-decoration:none;
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
-
-.card{
-grid-template-columns:1fr;
-text-align:center;
-}
 
 .grid{
 grid-template-columns:1fr;
@@ -170,39 +139,27 @@ grid-template-columns:1fr;
 
 <div class="container">
 
-<!-- PROFILE + ABOUT -->
+<!-- HEADER -->
+
+<div class="header">
+<h1>Smrut Shukla</h1>
+<p>Java Backend Developer | MapleCloud Technologies</p>
+</div>
+
+<!-- ABOUT CARD -->
 
 <div class="card">
 
-<div class="profile">
-
-<!-- 🔥 PASTE YOUR BASE64 IMAGE HERE -->
-<img src="data:image/jpeg;base64,BASE64_IMAGE_HERE" alt="Smrut Shukla">
-
-<h2>Smrut Shukla</h2>
-
-<p>Java Backend Developer</p>
-
-<p>MapleCloud Technologies</p>
-
-<div class="social">
-<a href="mailto:shrutishukla9696@gmail.com">📧</a>
-<a href="https://github.com">🐙</a>
-<a href="https://www.linkedin.com/in/smrut-shukla-07a2b5233">💼</a>
-</div>
-
-</div>
-
 <div class="about">
 
-<h1>About Me</h1>
+<h2>About Me</h2>
 
 <p>
 Java Backend Developer with 1.5+ years of experience building scalable backend systems using Java and Spring Boot.
 
-I specialize in developing REST APIs, microservices architecture and secure authentication systems using JWT and Spring Security.
+I specialize in REST APIs, microservices architecture and secure authentication using JWT and Spring Security.
 
-I have contributed to enterprise applications including a Document Management System, Learning Management System and network monitoring platforms using OpenNMS.
+Worked on enterprise systems including Document Management System (DMS), Learning Management System (LMS) and OpenNMS monitoring platform.
 </p>
 
 <div class="grid">
@@ -253,12 +210,12 @@ I have contributed to enterprise applications including a Document Management Sy
 <ul>
 <li>Develop backend services using Java and Spring Boot</li>
 <li>Build scalable REST APIs and microservices</li>
-<li>Implemented JWT-based authentication using Spring Security</li>
-<li>Worked with Docker and Kafka for scalable backend systems</li>
-<li>Developed APIs in OpenNMS modules including Category and Community String management</li>
-<li>Implemented backend APIs for bulk node onboarding in OpenNMS</li>
-<li>Configured monitoring and worked with both OpenNMS GUI and backend modules</li>
-<li>Currently contributing to development in the NMS module</li>
+<li>Implemented JWT-based authentication</li>
+<li>Worked with Docker and Kafka</li>
+<li>Developed APIs in OpenNMS modules</li>
+<li>Bulk node onboarding APIs</li>
+<li>Worked with GUI + backend monitoring</li>
+<li>Currently contributing to NMS module</li>
 </ul>
 
 </div>
@@ -272,12 +229,11 @@ I have contributed to enterprise applications including a Document Management Sy
 <h4>Document Management System (Team Project)</h4>
 
 <ul>
-<li>Contributed to backend development using Java and Spring Boot</li>
-<li>Implemented APIs for document upload and secure access</li>
-<li>Worked on workflow-based document approval system</li>
-<li>Participated in collaboration and document sharing features</li>
-<li>Worked with OCR functionality for text extraction</li>
-<li>Supported document version tracking and activity history</li>
+<li>Document upload & secure access APIs</li>
+<li>Workflow-based approval system</li>
+<li>Collaboration & sharing features</li>
+<li>OCR-based text extraction</li>
+<li>Version tracking & history</li>
 </ul>
 
 <p><b>Tech:</b> Java, Spring Boot, AWS S3, Hibernate, JWT</p>
@@ -285,12 +241,11 @@ I have contributed to enterprise applications including a Document Management Sy
 <h4 style="margin-top:30px;">Learning Management System (Team Project)</h4>
 
 <ul>
-<li>Contributed to backend services for course and user management</li>
-<li>Developed REST APIs using Spring Boot</li>
-<li>Participated in AI chatbot integration</li>
-<li>Worked on real-time messaging using WebSocket</li>
-<li>Integrated Google Meet for live classes</li>
-<li>Implemented secure authentication using JWT</li>
+<li>Course & user management APIs</li>
+<li>AI chatbot integration</li>
+<li>Real-time messaging using WebSocket</li>
+<li>Google Meet integration</li>
+<li>JWT authentication</li>
 </ul>
 
 <p><b>Tech:</b> Java, Spring Boot, WebSocket, JWT, MySQL</p>
