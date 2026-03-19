@@ -39,11 +39,28 @@ box-shadow:0 20px 40px rgba(0,0,0,0.4);
 text-align:center;
 }
 
+/* PROFILE IMAGE UPDATED */
+
 .profile img{
 width:170px;
 height:170px;
 border-radius:50%;
 object-fit:cover;
+
+/* Glow border */
+border:3px solid #06b6d4;
+
+/* 3D shadow */
+box-shadow:0 10px 25px rgba(6,182,212,0.6);
+
+transition:0.3s;
+}
+
+/* Hover zoom */
+
+.profile img:hover{
+transform:scale(1.05);
+box-shadow:0 15px 40px rgba(6,182,212,0.9);
 }
 
 .profile h2{
@@ -102,22 +119,14 @@ padding:8px 16px;
 border-radius:20px;
 font-size:14px;
 cursor:pointer;
-
 transition:all 0.3s ease;
-
 box-shadow:0 4px 12px rgba(0,0,0,0.4);
 }
 
-/* HOVER EFFECT */
-
 .skill:hover{
-
 background:#06b6d4;
-
 transform:translateY(-6px) scale(1.08);
-
 box-shadow:0 12px 30px rgba(6,182,212,0.6);
-
 }
 
 /* SECTION */
@@ -177,7 +186,8 @@ grid-template-columns:1fr;
 
 <div class="profile">
 
-<img src="https://via.placeholder.com/170">
+<!-- 🔥 YOUR IMAGE HERE -->
+<img src="profile.jpg">
 
 <h2>Smrut Shukla</h2>
 
@@ -224,7 +234,7 @@ platforms using OpenNMS.
 <span class="skill">Java</span>
 <span class="skill">Spring Boot</span>
 <span class="skill">Spring Security</span>
-<span class="skill">Sql</span>
+<span class="skill">SQL</span>
 <span class="skill">Hibernate</span>
 <span class="skill">Docker</span>
 <span class="skill">Kafka</span>
@@ -256,7 +266,7 @@ platforms using OpenNMS.
 
 </div>
 
-<!-- PROFESSIONAL EXPERIENCE -->
+<!-- EXPERIENCE -->
 
 <div class="card-box">
 
@@ -265,19 +275,12 @@ platforms using OpenNMS.
 <ul>
 
 <li>Develop backend services using Java and Spring Boot</li>
-
 <li>Build scalable REST APIs and microservices</li>
-
 <li>Implemented JWT-based authentication using Spring Security</li>
-
 <li>Worked with Docker and Kafka for scalable backend systems</li>
-
 <li>Developed APIs in OpenNMS modules including Category and Community String management</li>
-
 <li>Implemented backend APIs for bulk node onboarding in OpenNMS</li>
-
 <li>Configured monitoring and worked with both OpenNMS GUI and backend modules</li>
-
 <li>Currently contributing to development in the NMS module</li>
 
 </ul>
@@ -295,15 +298,10 @@ platforms using OpenNMS.
 <ul>
 
 <li>Contributed to backend development using Java and Spring Boot</li>
-
 <li>Implemented APIs for document upload and secure access</li>
-
 <li>Worked on workflow-based document approval system</li>
-
 <li>Participated in collaboration and document sharing features</li>
-
 <li>Worked with OCR functionality for text extraction from documents</li>
-
 <li>Supported document version tracking and activity history</li>
 
 </ul>
@@ -315,15 +313,10 @@ platforms using OpenNMS.
 <ul>
 
 <li>Contributed to backend services for course and user management</li>
-
 <li>Developed REST APIs using Spring Boot</li>
-
 <li>Participated in AI chatbot integration for student assistance</li>
-
 <li>Worked on real-time messaging using WebSocket</li>
-
 <li>Integrated Google Meet for live online classes</li>
-
 <li>Implemented secure authentication using JWT</li>
 
 </ul>
